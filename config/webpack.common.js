@@ -168,6 +168,11 @@ module.exports = function (options) {
           exclude: [helpers.root('src', 'styles')]
         },
 
+        {
+           test:/\.styl$/,
+           use: ['to-string-loader', 'css-loader', 'stylus-loader'],           
+        },
+
         /* Raw loader support for *.html
          * Returns file content as string
          *
